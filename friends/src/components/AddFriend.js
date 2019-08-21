@@ -38,7 +38,7 @@ class AddFriend extends Component {
   render() {
     return (
       <form className='login'>
-        <h3>Add A New Friend to Your List</h3>
+        <h3>Add A New Friend</h3>
 
         <div>
           <input

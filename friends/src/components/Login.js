@@ -64,7 +64,7 @@ class Login extends React.Component {
               onChange={this.handleChange}
           />
           </div><br />
-          <Button variant='contained' color='secondary'>{this.state.isLoading ? "Loading" : "Login"}</Button>
+          <Button variant='contained' color='secondary' href='/protected'>Login</Button>
         </form>
       </div>
     );

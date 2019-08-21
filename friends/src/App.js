@@ -16,8 +16,8 @@ function App() {
         <div className="App">
           {/*Use horizontal buttons for links*/}
           <Link to="/login"><Button color="primary">Login</Button></Link>
-          <Link to="/protected"><Button color="primary">Friends List</Button></Link>
-          <Link to="/add"><Button  color="primary">Add A Friend</Button></Link>
+          <Link to="/protected"><Button  color="primary">Friends List</Button></Link>
+          <Link to="/add"><Button color="primary">Add A Friend</Button></Link>
 
           <Route path="/login" component={Login}/>
           <PrivateRoute exact path="/protected" component={Friends}/>
