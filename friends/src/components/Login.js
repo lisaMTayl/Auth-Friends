@@ -9,11 +9,7 @@ class Login extends React.Component {
     }
   };
 
-  handleSubmit = e => {
-
-  }
-
-  handleChange = e => {
+   handleChange = e => {
     this.setState({
       credentials: {
         ...this.state.credentials,
