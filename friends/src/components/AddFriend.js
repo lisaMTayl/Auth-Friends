@@ -20,9 +20,9 @@ class AddFriend extends Component {
     axiosWithAuth()
       .post('http://localhost:5000/api/friends', pass)
       .then(res => {
-        console.log('New FriendsList!', res)
+        console.log('Adding new friend!', res)
       })
-      .catch(err => console.log('You have been dumped', err.response));
+      .catch(err => console.log('Add new friend failed', err.response));
 
     this.setState({ name: '', age: '', email: '' });
   };
@@ -34,7 +34,7 @@ class AddFriend extends Component {
       age: age,
       email: email
     })
-  }
+  };
 
   render() {
     return (
