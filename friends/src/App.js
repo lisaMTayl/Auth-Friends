@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom';
 
 import Login from './components/Login';
 import Friends from './components/Friends';
@@ -14,7 +14,7 @@ function App() {
             <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/protected">Friends</Link>
+            <Link to="/protected">Friends List</Link>
           </li>
         </ul>
         <Route path="/login" component={Login} />
