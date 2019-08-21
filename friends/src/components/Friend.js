@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const FriendsList = (props) => {
+const Friend = (props) => {
   console.log(props);
   return (
     <div>
@@ -12,4 +12,4 @@ const FriendsList = (props) => {
   );
 };
 
-export default FriendsList;
+export default Friend;

@@ -1,5 +1,6 @@
 import React from 'react';
 import {axiosWithAuth} from "../utils/axiosWithAuth";
+import { Button } from "@material-ui/core";
 
 class Login extends React.Component {
   state = {
@@ -43,22 +44,27 @@ class Login extends React.Component {
   render() {
     return (
       <div>
+        <h1>Sign in to view your friends</h1>
         <form onSubmit={this.login}>
-          <input
-            type="text"
-            name="username"
-            placeholder="name"
-            value={this.state.credentials.username}
-            onChange={this.handleChange}
+          <div>
+            <input
+              type="text"
+              name="username"
+              placeholder="name"
+              value={this.state.credentials.username}
+              onChange={this.handleChange}
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              name="password"
+              placeholder="password"
+              value={this.state.credentials.password}
+              onChange={this.handleChange}
           />
-          <input
-            type="password"
-            name="password"
-            placeholder="password"
-            value={this.state.credentials.password}
-            onChange={this.handleChange}
-          />
-          <button>{this.state.isLoading ? "Loading" : "Login"}</button>
+          </div><br />
+          <Button variant='contained' color='secondary'>{this.state.isLoading ? "Loading" : "Login"}</Button>
         </form>
       </div>
     );

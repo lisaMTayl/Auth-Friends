@@ -2,6 +2,10 @@ import React from 'react';
 import Loader from 'react-loader-spinner';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
+import Avatar from '@material-ui/core/Avatar';
+import Card from '@material-ui/core/Card';
+
+
 class Friends extends React.Component {
   state = {
     friends: []
@@ -24,13 +28,21 @@ class Friends extends React.Component {
       .catch(err => console.log(err.response));
   };
 
+
+
   render() {
     return (
       <div>
         {this.state.isLoading ? "Loading" : ""}
         {this.state.friends.map(i => {
-          return <div key={i.id}>{i.name}, {i.age}, {i.email}</div>
-        })}
+          return (
+            <Card key={i.id} >
+              Name: {i.name} <br />
+              Age: {i.age} <br />
+              Email: {i.email}<br /><br />
+            </Card>
+          )
+        })}<br />
       </div>
     );
   }

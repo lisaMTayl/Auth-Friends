@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
-
-
+import { Button } from "@material-ui/core";
 
 class AddFriend extends Component {
   state = {
@@ -41,30 +40,36 @@ class AddFriend extends Component {
       <form className='login'>
         <h3>Add A New Friend to Your List</h3>
 
-        <input
-          value={this.state.name}
-          name="name"
-          type="text"
-          placeholder="Name"
-          onChange={this.handleChange}
-        />
-        <input
-          value={this.state.age}
-          name="age"
-          type="text"
-          placeholder="Age"
-          onChange={this.handleChange}
-        />
-        <input
-          value={this.state.email}
-          name="email"
-          type="text"
-          placeholder="Email"
-          onChange={this.handleChange}
-        />
-        <button onClick={() => this.handleAddFriend()} type="button">
+        <div>
+          <input
+            value={this.state.name}
+            name="name"
+            type="text"
+            placeholder="Name"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div>
+          <input
+            value={this.state.age}
+            name="age"
+            type="text"
+            placeholder="Age"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div>
+          <input
+            value={this.state.email}
+            name="email"
+            type="text"
+            placeholder="Email"
+            onChange={this.handleChange}
+          />
+        </div><br />
+        <Button variant='contained' color='secondary' onClick={() => this.handleAddFriend()} type="button">
           Add New Friend
-        </button>
+        </Button>
       </form>
     );
   }
